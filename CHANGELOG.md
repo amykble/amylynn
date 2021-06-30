@@ -6,8 +6,14 @@ All notable changes to this project will be documented in this file.
 
 - Fix the positioning of the header and content on scroll
 - Add time to read to the blog pages
-- Upload to Github
 - Add an icon set
+
+---
+
+### [0.1.14] | 2021-06-30
+
+- Pushed to Github
+- Pointed the "Edit on Github" button to the right place
 
 ---
 
