@@ -1,0 +1,13 @@
+/* ***** Notes *****
+
+1. This file is for all variables that don't need their own dedicated file
+It is here to provide variables for often repetative tasks, like overriding the default outline style
+
+***** ***** ***** */
+
+@use 'colors' as *;
+
+$transition-style: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, outline-color 0.15s ease-in-out;
+
+$outline-style: 2px solid $primary-clr-300;

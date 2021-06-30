@@ -1,0 +1,60 @@
+@use 'variables' as *;
+@use 'breakpoints' as *;
+@use 'colors' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,400&display=swap');
+
+@font-face {
+  font-family: 'MadeOuterSansAltRegular';
+  src: url('/assets/fonts/outer-sans-alt-regular/made-outer-sans-alt-regular.eot')
+      format('embedded-opentype'),
+    url('/assets/fonts/outer-sans-alt-regular/made-outer-sans-alt-regular.woff2') format('woff2'),
+    url('/assets/fonts/outer-sans-alt-regular/made-outer-sans-alt-regular.woff') format('woff'),
+    url('/assets/fonts/outer-sans-alt-regular/made-outer-sans-alt-regular.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$headings-font: 'MadeOuterSansAltRegular', cursive;
+$main-font: 'Montserrat', sans-serif;
+$fancy-font: 'Cormorant Garamond', serif;
+
+@mixin default-link {
+  text-decoration: underline;
+  color: $dark-clr;
+  font-weight: normal;
+  transition: none;
+
+  &:hover,
+  &:focus {
+    color: $secondary-clr-500;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $headings-font;
+}
+
+body,
+p,
+a,
+figure,
+blockquote,
+caption {
+  font-family: $main-font;
+}
+
+a {
+  color: $dark-clr;
+}
+
+// main p {
+//   font-size: 1.125rem;
+// }
+
+main a {
+  @include default-link;
+}

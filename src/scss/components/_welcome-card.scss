@@ -1,0 +1,34 @@
+@use '../base' as *;
+
+.welcome-card {
+  max-width: $large-screen;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: $light-clr;
+
+  h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+
+  .stand-out {
+    color: $primary-clr-500;
+  }
+
+  .headshot-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 100;
+
+    .headshot {
+      height: 12rem;
+      border-radius: 50%;
+    }
+  }
+}

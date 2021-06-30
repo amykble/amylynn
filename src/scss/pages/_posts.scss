@@ -1,0 +1,97 @@
+@use '../base' as *;
+@use '../components' as *;
+
+.posts-page {
+  .banner-image {
+    position: fixed;
+    top: 4rem;
+    height: 20rem;
+    width: 100%;
+    // margin-bottom: 24rem;
+    background-color: #1c2d4d;
+    background-image: url(/assets/img/banner-images/Blurred-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: luminosity;
+  }
+
+  .title-container {
+    max-width: $large-screen;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+    color: $light-clr;
+  }
+
+  .title {
+    text-transform: uppercase;
+  }
+
+  .tags {
+    min-width: 50%;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid $gray-clr;
+    border-bottom: 1px solid $gray-clr;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0 0.2em;
+    font-weight: 600;
+    font-style: italic;
+    color: $light-clr;
+
+    @include underline-styled-link-mixin;
+
+    &::before {
+      background-color: #e2e6eb28;
+    }
+  }
+
+  .github-link {
+    display: inline-block;
+    padding: 0 0.2em;
+    font-weight: 600;
+    font-style: italic;
+    color: $secondary-clr-500;
+
+    @include underline-styled-link-mixin;
+
+    &::before {
+      background-color: #e2e6eb28;
+    }
+  }
+
+  .post-main-container {
+    position: relative;
+    margin-top: 24rem;
+    padding-top: 4rem;
+    background-color: white;
+  }
+
+  .date-uploaded,
+  .date-updated {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .date-updated {
+    margin-bottom: 2rem;
+  }
+
+  .post-main-area {
+    p {
+      font-size: 1.125rem;
+    }
+  }
+}

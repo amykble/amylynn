@@ -1,0 +1,30 @@
+---
+layout: layouts/base
+---
+
+<div class="posts-page">
+	<div class="banner-image">
+		<div class="title-container">
+			<h1 class="title">{{ title }}</h1>
+			{% if tags %}
+			  <p class="tags">
+			  {% for tag in tags %}
+			    <a href="/tags/{{ tag }}" class="tag">#{{ tag }}</a>
+				{% endfor %}
+				</p>
+			{% endif %}
+			<a class="github-link" href="#">Edit on Github</a>
+		</div>
+	</div>
+	<div class="post-main-container">
+    <main class="post-main-area">
+			{% if date %}
+			  <time class="date-uploaded" datetime="{{ date | htmlDateString }}">Published: {{ date | readableDate }}</time>
+			{% endif %}
+			{% if updated %}
+			  <time class="date-updated" datetime="{{ updated | htmlDateString }}">Last Updated: {{ updated | readableDate }}</time>
+			{% endif %}
+		  {{ content | safe }}
+	  </main>
+	</div>
+</div>

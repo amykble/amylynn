@@ -1,0 +1,19 @@
+<header>
+	<div class="top-clr"></div>
+	<div class="nav-container">
+		<nav>
+			<a class="nav-logo" href="/">
+				<img class="logo-item" src="/assets/img/amy-logo-black.svg">
+				<p class="logo-text">amy lynn</p>
+			</a>
+			{% set mainNav = collections.all | eleventyNavigation %}
+      <ul class="site-nav">
+        {%- for navLink in mainNav %}
+        <li{% if navLink.url == page.url %} class="active"{% endif %}>
+          <a class="nav-item underline-styled-link" href="{{ navLink.url | url }}">{{ navLink.title }}</a>
+        </li>
+        {%- endfor %}
+      </ul>
+		</nav>
+	</div>
+</header>

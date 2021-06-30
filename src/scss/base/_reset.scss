@@ -1,0 +1,108 @@
+/* ***** Notes *****
+
+1. Most of this reset is from https://piccalil.li/blog/a-modern-css-reset with some adjustments
+2. If anything in this reset is messing with other styles, they can be adjusted or removed
+3. I have added some useful resets, such as a reset to the focus outline and highlighting of elements
+
+***** ***** ***** */
+
+@use 'variables' as *;
+@use 'colors' as *;
+@use 'breakpoints' as *;
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul */
+ul[class] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Added defaults
+
+body {
+  background-color: white;
+}
+
+main.page-main-area,
+main.post-main-area {
+  max-width: $large-screen;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+a[class] {
+  text-decoration: none;
+}
+
+// :focus {
+//   outline: none;
+// }
+
+// :focus-visible {
+//   outline: $outline-style;
+// }
+
+::selection {
+  background: $primary-clr-300;
+}

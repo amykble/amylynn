@@ -1,0 +1,48 @@
+@use '../base' as *;
+
+@mixin underline-styled-link-mixin {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 120%;
+    height: 30%;
+    top: 60%;
+    left: -10%;
+    z-index: -1;
+    background-color: #e2e6eb;
+    transition: all 200ms ease;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    top: -5%;
+    height: 110%;
+  }
+}
+
+.underline-styled-header {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.underline-styled-header::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 108%;
+  height: 40%;
+  top: 60%;
+  left: -4%;
+  z-index: -1;
+  background-color: $secondary-clr-400;
+}
+
+.underline-styled-link {
+  @include underline-styled-link-mixin;
+}

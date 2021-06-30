@@ -1,0 +1,29 @@
+/* ***** Notes *****
+
+1. These Breakpoints are mobile first
+This means no breakpoint applied styles the design for the smallest screens
+Then, the 'small-screen' breakpoint styles 26.25em, or 420px and above
+These values can be changes per project
+
+***** ***** ***** */
+
+$small-screen: 26.25em;
+@mixin small-screen {
+  @media (min-width: $small-screen) {
+    @content;
+  }
+}
+
+$medium-screen: 48em;
+@mixin medium-screen {
+  @media (min-width: $medium-screen) {
+    @content;
+  }
+}
+
+$large-screen: 62em;
+@mixin large-screen {
+  @media (min-width: $large-screen) {
+    @content;
+  }
+}

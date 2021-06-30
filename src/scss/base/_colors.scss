@@ -1,0 +1,39 @@
+/* ***** Notes *****
+
+1. The main value for each colour is set at the top of each set
+Then, the mix property is used to create shades and tints of each colour
+This is useful for rapidly creating lighter or darker versions of the original colour
+For example, $primary-clr-400 is aa mix, 75% the original colour, and 25% white
+
+***** ***** ***** */
+
+// 500 = main
+
+// Primary Colour
+$primary-clr-500: rgb(99, 102, 241);
+
+$primary-clr-800: mix($primary-clr-500, black, 25%);
+$primary-clr-700: mix($primary-clr-500, black, 50%);
+$primary-clr-600: mix($primary-clr-500, black, 75%);
+
+$primary-clr-400: mix($primary-clr-500, white, 75%);
+$primary-clr-300: mix($primary-clr-500, white, 50%);
+$primary-clr-200: mix($primary-clr-500, white, 25%);
+
+// Secondary Colour
+$secondary-clr-500: rgb(52, 211, 153);
+
+$secondary-clr-800: mix($secondary-clr-500, black, 25%);
+$secondary-clr-700: mix($secondary-clr-500, black, 50%);
+$secondary-clr-600: mix($secondary-clr-500, black, 75%);
+
+$secondary-clr-400: mix($secondary-clr-500, white, 75%);
+$secondary-clr-300: mix($secondary-clr-500, white, 50%);
+$secondary-clr-200: mix($secondary-clr-500, white, 25%);
+
+// Blacks, whites, grays
+$dark-clr: rgb(17, 24, 39);
+$gray-clr: rgb(107, 114, 128);
+$light-gray-clr: rgb(229, 231, 235);
+$light-clr: rgb(249, 250, 251);
+$error-clr: rgb(237, 41, 57);

@@ -1,0 +1,65 @@
+@use '../base' as *;
+@use '../components' as *;
+
+header {
+  // margin-bottom: 4rem;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .top-clr {
+    width: 100%;
+    padding: 0.25rem;
+    background-color: $secondary-clr-500;
+  }
+
+  .nav-container {
+    width: 100%;
+    background-color: $light-clr;
+  }
+
+  nav {
+    max-width: $large-screen;
+    margin: 0 auto;
+    padding: 1.25rem 1rem 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-nav {
+    display: flex;
+  }
+
+  .nav-item {
+    margin-left: 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    transition: all 200ms ease;
+  }
+
+  .nav-item:hover,
+  .nav-item:focus {
+    color: $primary-clr-500;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+
+    .logo-item {
+      height: 1.5rem;
+    }
+
+    .logo-text {
+      margin-left: 1rem;
+      font-family: $headings-font;
+      font-size: 1.125rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+}
